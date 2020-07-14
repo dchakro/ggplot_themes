@@ -41,3 +41,6 @@ customtheme <- DC_theme_generator(type = 'L',
 ggplot(data = dat, aes(x=X, y=Y, color=Class)) + geom_point() + scale_color_manual(values=c("red","blue")) + xlab("X-axis") + ylab("Y-axis") + ggtitle("Customized DC_theme_generator") + customtheme
 ```
 
+The above theme results in a canvas like this:
+
+![Rplot](img/Rplot.png)

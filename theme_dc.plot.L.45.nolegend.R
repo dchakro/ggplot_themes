@@ -1,5 +1,7 @@
+# This is legacy theme defination for maintaining compatibility  with my own historical code base.
+
 library(ggplot2)
-theme_dc.plot.L.45.nolegend=theme(
+theme_dc.plot.L.45.nolegend=ggplot2::theme(
   axis.line = element_line(colour = "black",
                            size=0.5),
   panel.border = element_blank(),
