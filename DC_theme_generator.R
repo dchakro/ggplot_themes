@@ -1,3 +1,10 @@
+####
+## Author: Deepankar Chakroborty
+## Available at: https://gitlab.utu.fi/deecha/ggplot_themes/
+## Report issues: https://gitlab.utu.fi/deecha/ggplot_themes/-/issues/new
+
+
+
 DC_theme_generator <- function(type,legend=T,ticks="out",x.axis.angle=0,hjust=0.5,vjust=0.5,fontsize.cex=1.5,fontfamily="serif"){
   
   ## Options:
