@@ -4,7 +4,9 @@
 
 ```ggplot2``` is a fantastic package made available by the great people over at [tidyverse](https://ggplot2.tidyverse.org/). ```ggplot2``` is great for designing plots layer by layer in R. Although ```ggplot2``` provides theming capabilities, the default choices available through the package can seem mundane and unapplealing for making publication quality figures.
 
-See these examples:![animation](img/animation.gif)
+See these examples:
+
+![animation](img/animation.gif)
 
 
 
