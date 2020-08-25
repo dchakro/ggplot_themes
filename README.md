@@ -17,7 +17,7 @@ I found myself writing these ```ggplot2::theme()``` objects everytime I wanted t
 ## Using DC_theme_generator
 
 ```R
-source("https://gitlab.utu.fi/deecha/ggplot_themes/-/raw/master/DC_theme_generator.R")
+source('https://raw.githubusercontent.com/dchakro/ggplot_themes/master/DC_theme_generator.R')
 
 customtheme <- DC_theme_generator(type='L')
 ggplot()+geom_point()+customtheme
@@ -28,17 +28,18 @@ More detailed usage instructions along with an example can be found in the R scr
 Here is an example tweaking some of the defaults:
 
 ```R
-source("https://gitlab.utu.fi/deecha/ggplot_themes/-/raw/master/DC_theme_generator.R")
+source('https://raw.githubusercontent.com/dchakro/ggplot_themes/master/DC_theme_generator.R')
 customtheme <- DC_theme_generator(type = 'L',
                                   legend = 'F',
-                                  ticks = 'out',
+                                  ticks = 'in',
                                   x.axis.angle = 45,
                                   hjust = 0.5,
                                   vjust = 0.5,
-                                  fontsize.cex = 1.8,
-                                  fontfamily = 'mono')
+                                  fontsize.cex = 1.5,
+                                  fontfamily = 'Palatino',
+                                  ax.fontstyle = "bold.italic")
 
-ggplot(data = dat, aes(x=X, y=Y, color=Class)) + geom_point() + scale_color_manual(values=c("red","blue")) + xlab("X-axis") + ylab("Y-axis") + ggtitle("Customized DC_theme_generator") + customtheme
+ggplot(data = dat, aes(x=X,y=Y,color=Class)) + geom_point() + scale_color_manual(values=c("red","blue")) + xlab("X-axis") + ylab("Y-axis") + ggtitle("Customized DC_theme_generator") + customtheme
 ```
 
 The above theme results in a canvas like this:

@@ -32,8 +32,8 @@ customtheme <- DC_theme_generator(type = 'L',
                                   x.axis.angle = 45,
                                   hjust = 0.5,
                                   vjust = 0.5,
-                                  fontsize.cex = 1.8,
-                                  fontfamily = 'mono',
-                                  fontstyle = "bold")
+                                  fontsize.cex = 1.5,
+                                  fontfamily = 'Palatino',
+                                  ax.fontstyle = "bold.italic")
 
 ggplot(data = dat, aes(x=X,y=Y,color=Class)) + geom_point() + scale_color_manual(values=c("red","blue")) + xlab("X-axis") + ylab("Y-axis") + ggtitle("Customized DC_theme_generator") + customtheme

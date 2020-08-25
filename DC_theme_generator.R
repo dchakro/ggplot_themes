@@ -1,18 +1,28 @@
 DC_theme_generator <- function(type, legend=T, ticks="out", x.axis.angle=0, hjust=0.5, vjust=0.5, fontsize.cex=1.5, fontfamily="serif", ax.fontstyle="bold.italic"){
+  # #<---------------------------->
+  # # You must include this section when:
+  # # Distributing, Embedding, Using and/or Modifying this code.
+  # # Please read and abide by the terms of the included LICENSE.
+  # # Copyright 2020, Deepankar Chakroborty, All rights reserved.
   
-  # # Generate themes for ggplot2
   # # Author: Deepankar Chakroborty
   # # Available at: https://github.com/dchakro/ggplot_themes
   # # Report issues: https://github.com/dchakro/ggplot_themes/issues
+  # # LICENSE: https://github.com/dchakro/ggplot_themes/blob/master/LICENSE
+  # #<---------------------------->
   
-  ## Options:
+  # # PURPOSE:  Generate themes for ggplot2
+  
+  # # OPTIONS:
   # type: 'L', 'square'
+  # legent: T = left, F = no legend
   # ticks: 'in', 'out'
   # fontfamily: 'serif' , 'sans' , 'mono', 'Helvetica', 'Palatino'
   # ax.fontstyle = 'plain', 'italic', 'bold', 'bold.italic'
+  # x.axis.angle = 45  (i.e. angle for the x axis text)
+  # hjust and vjust = to adjust the x axis text
   
   ticks <- tolower(ticks)
-  # Supports system fonts, and doesn't transform them to lower case as font names are case-sensitive.
   fontfamily <- ifelse(test = tolower(fontfamily) %in% c("sans","serif","mono"),yes = tolower(fontfamily),no = fontfamily)
   
   if( type == "square"){
