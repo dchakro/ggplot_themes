@@ -23,8 +23,8 @@ customtheme <- DC_theme_generator(type='square')
 ggplot(data = dat,aes(x=X,y=Y,color=Class))+geom_point()+scale_color_manual(values=c("red","blue"))+xlab("X-axis")+ylab("Y-axis")+ggtitle("DC_theme_generator('square')")+customtheme
 ggsave("~/Desktop/tmp/4.png",width = 6,height = 5,dpi = "print")
 
-
-
+# convert to gif by using ImageMagick  https://imagemagick.org
+# system(command = 'cd ~/Desktop/tmp; convert -delay 100 -loop 0 *.png animation.gif')    
 
 customtheme <- DC_theme_generator(type = 'L',
                                   legend = 'F',
