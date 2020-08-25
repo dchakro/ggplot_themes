@@ -1,3 +1,9 @@
+[![GitHub license](https://img.shields.io/github/license/dchakro/ggplot_themes)](https://github.com/dchakro/ggplot_themes/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/dchakro/ggplot_themes)](https://github.com/dchakro/ggplot_themes/issues)
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/dchakro/ggplot_themes/master.svg)](https://github.com/dchakro/ggplot_themes/branches)
+[![GNU_R](https://img.shields.io/badge/Made%20with-GNU_R-blue)](https://www.r-project.org/)
+[![ggplotw](https://img.shields.io/badge/ggplot2_is-awesome-f34213)](https://ggplot2.tidyverse.org/)
+
 # DC_theme_generator : a theme generator for ggplot2
 
 
