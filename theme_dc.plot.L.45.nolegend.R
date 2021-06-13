@@ -1,5 +1,9 @@
 # This is legacy theme defination for maintaining compatibility  with my own historical code base.
 
+warning("This is legacy code. Please migrate to: https://github.com/dchakro/ggplot_themes")
+message("Please run:")
+message("source('https://raw.githubusercontent.com/dchakro/ggplot_themes/master/DC_theme_generator.R')")
+
 library(ggplot2)
 theme_dc.plot.L.45.nolegend=ggplot2::theme(
   axis.line = element_line(colour = "black",

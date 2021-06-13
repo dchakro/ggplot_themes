@@ -1,4 +1,14 @@
-DC_theme_generator <- function(type, legend=T, ticks="out", x.axis.angle=0, hjust=0.5, vjust=0.5, fontsize.cex=1.5, fontfamily="serif", ax.fontstyle="bold.italic"){
+DC_theme_generator <- function(type, 
+                               legend = T, 
+                               ticks = "out", 
+                               x.axis.angle = 0, 
+                               hjust = 0.5, 
+                               vjust = 0.5, 
+                               fontsize.cex = 1.5, 
+                               fontfamily = "serif",
+                               ax.fontstyle = "italic",
+                               title.fontstyle = "bold.italic"){
+  
   # #<---------------------------->
   # # You must include this section when:
   # # Distributing, Embedding, Using and/or Modifying this code.
@@ -18,7 +28,7 @@ DC_theme_generator <- function(type, legend=T, ticks="out", x.axis.angle=0, hjus
   # legent: T = left, F = no legend
   # ticks: 'in', 'out'
   # fontfamily: 'serif' , 'sans' , 'mono', 'Helvetica', 'Palatino'
-  # ax.fontstyle = 'plain', 'italic', 'bold', 'bold.italic'
+  # title.fontstyle and ax.fontstyle = 'plain', 'italic', 'bold', 'bold.italic'
   # x.axis.angle = 45  (i.e. angle for the x axis text)
   # hjust and vjust = to adjust the x axis text
   
@@ -37,7 +47,7 @@ DC_theme_generator <- function(type, legend=T, ticks="out", x.axis.angle=0, hjus
         axis.ticks = element_line(colour = "black"),
         text = element_text(family = fontfamily),
         plot.title = element_text(family = fontfamily,
-                                  face="bold",
+                                  face = title.fontstyle,
                                   color = "black",
                                   size = rel(fontsize.cex)),
         axis.ticks.length = unit(ifelse(ticks=="in",-0.2,0.2),"cm"),
@@ -77,7 +87,7 @@ DC_theme_generator <- function(type, legend=T, ticks="out", x.axis.angle=0, hjus
         axis.ticks = element_line(colour = "black"),
         text = element_text(family = fontfamily),
         plot.title = element_text(family = fontfamily,
-                                  face="bold",
+                                  face = title.fontstyle,
                                   color = "black",
                                   size = rel(fontsize.cex)),
         axis.ticks.length = unit(ifelse(ticks=="in",-0.2,0.2), "cm"),
