@@ -2,8 +2,8 @@ DC_theme_generator <- function(type,
                                legend = T, 
                                ticks = "out", 
                                x.axis.angle = 0, 
-                               hjust = 0.5, 
-                               vjust = 0.5, 
+                               hjust = NULL, 
+                               vjust = NULL, 
                                fontsize.cex = 1.5, 
                                fontfamily = "serif",
                                ax.fontstyle = "italic",
@@ -31,6 +31,14 @@ DC_theme_generator <- function(type,
   # title.fontstyle and ax.fontstyle = 'plain', 'italic', 'bold', 'bold.italic'
   # x.axis.angle = 45  (i.e. angle for the x axis text)
   # hjust and vjust = to adjust the x axis text
+  
+  
+  if(is.null(hjust)){
+    hjust <- ifelse(test = x.axis.angle==45,yes = 1.0,no = 0.5)
+  }
+  if(is.null(vjust)){
+    vjust <- ifelse(test = x.axis.angle==45,yes = 1.0,no = 0.5)
+  }
   
   ticks <- tolower(ticks)
   fontfamily <- ifelse(test = tolower(fontfamily) %in% c("sans","serif","mono"),yes = tolower(fontfamily),no = fontfamily)
