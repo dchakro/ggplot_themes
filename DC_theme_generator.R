@@ -7,7 +7,8 @@ DC_theme_generator <- function(type,
                                fontsize.cex = 1.5, 
                                fontfamily = "serif",
                                ax.fontstyle = "italic",
-                               title.fontstyle = "bold.italic"){
+                               title.fontstyle = "bold.italic",
+                               title.fontsize.cex = 1.5){
   
   # #<---------------------------->
   # # You must include this section when:
@@ -57,7 +58,7 @@ DC_theme_generator <- function(type,
         plot.title = element_text(family = fontfamily,
                                   face = title.fontstyle,
                                   color = "black",
-                                  size = rel(fontsize.cex)),
+                                  size = rel(title.fontsize.cex)),
         axis.ticks.length = unit(ifelse(ticks=="in",-0.2,0.2),"cm"),
         axis.title = element_text(family = fontfamily,
                                   face = ax.fontstyle,
@@ -97,7 +98,7 @@ DC_theme_generator <- function(type,
         plot.title = element_text(family = fontfamily,
                                   face = title.fontstyle,
                                   color = "black",
-                                  size = rel(fontsize.cex)),
+                                  size = rel(title.fontsize.cex)),
         axis.ticks.length = unit(ifelse(ticks=="in",-0.2,0.2), "cm"),
         axis.title = element_text(family = fontfamily,
                                   face = ax.fontstyle,
