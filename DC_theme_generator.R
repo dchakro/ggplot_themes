@@ -10,7 +10,7 @@ DC_theme_generator <- function(type,
                                title.fontstyle = "bold.italic",
                                title.fontsize.cex = 1.5,
                                x_gridline=NA,
-                               x_gridline=NA){
+                               y_gridline=NA){
   
   # #<---------------------------->
   # # You must include this section when:
