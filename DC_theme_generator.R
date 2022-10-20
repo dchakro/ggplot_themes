@@ -8,7 +8,9 @@ DC_theme_generator <- function(type,
                                fontfamily = "serif",
                                ax.fontstyle = "italic",
                                title.fontstyle = "bold.italic",
-                               title.fontsize.cex = 1.5){
+                               title.fontsize.cex = 1.5,
+                               x_gridline=NA,
+                               x_gridline=NA){
   
   # #<---------------------------->
   # # You must include this section when:
@@ -52,7 +54,8 @@ DC_theme_generator <- function(type,
                                     fill=NA,
                                     size=1),
         panel.background=element_blank(),
-        panel.grid.major=element_line(color=NA),
+        panel.grid.major.x=element_line(color=x_gridline),
+        panel.grid.major.y=element_line(color=y_gridline),
         axis.ticks = element_line(colour = "black"),
         text = element_text(family = fontfamily),
         plot.title = element_text(family = fontfamily,
