@@ -92,7 +92,7 @@ DC_theme_generator <- function(type,
       # Type: L
       themeToReturn <- ggplot2::theme(
         axis.line = element_line(colour = "black",
-                                 size=0.5),
+                                 linewidth=0.5),
         panel.border = element_blank(),
         panel.background = element_blank(),
         panel.grid.major.x=element_line(color=x_gridline),
