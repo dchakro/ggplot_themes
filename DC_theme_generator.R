@@ -1,11 +1,12 @@
 DC_theme_generator <- function(type, 
-                               legend = T, 
+                               legend = T,
+                               legend.position = "right",
                                ticks = "out", 
                                x.axis.angle = 0, 
                                hjust = NULL, 
                                vjust = NULL, 
                                fontsize.cex = 1.5, 
-                               fontfamily = "serif",
+                               fontfamily = "sans",
                                ax.fontstyle = "italic",
                                title.fontstyle = "bold.italic",
                                title.fontsize.cex = 1.5,
@@ -44,7 +45,7 @@ DC_theme_generator <- function(type,
   }
   
   ticks <- tolower(ticks)
-  fontfamily <- ifelse(test = tolower(fontfamily) %in% c("sans","serif","mono"),yes = tolower(fontfamily),no = fontfamily)
+  fontfamily <- ifelse(test = tolower(fontfamily) %in% c("sans", "serif", "mono"), yes = tolower(fontfamily), no = fontfamily)
   
   if( type == "square"){
       # Type: square
@@ -84,7 +85,7 @@ DC_theme_generator <- function(type,
                                    margin=unit(c(0.3,0.3,0.3,0.3), "cm")),
         legend.key= element_rect(fill=NA,
                                  colour = NA),
-        legend.position=ifelse(test = legend,yes = "right" ,no = "none")
+        legend.position=ifelse(test = legend, yes = legend.position , no = "none")
         )
   }
   
@@ -125,8 +126,41 @@ DC_theme_generator <- function(type,
                                    margin=unit(c(0.3,0.3,0.3,0.3), "cm")),
         legend.key = element_rect(fill=NA,
                                   colour = NA),
-        legend.position=ifelse(test = legend,yes = "right" ,no = "none")
+        legend.position=ifelse(test = legend, yes = legend.position , no = "none")
       )
-    }  
+  } 
+  
+  if( type == "gridlines"){
+      # Type: gridlines
+      themeToReturn <- ggplot2::theme_linedraw() + theme(
+          text = element_text(family = fontfamily),
+          plot.title = element_text(family = fontfamily,
+                                    face = title.fontstyle,
+                                    color = "black",
+                                    size = rel(title.fontsize.cex)),
+          axis.ticks.length = unit(ifelse(ticks=="in",-0.2,0.2),"cm"),
+          axis.title = element_text(family = fontfamily,
+                                    face = ax.fontstyle,
+                                    size=rel(fontsize.cex)),
+          axis.text.y = element_text(family = fontfamily,
+                                     face = "plain",
+                                     size = rel(fontsize.cex),
+                                     hjust = 1,
+                                     angle = 0,
+                                     color = "black",
+                                     margin=unit(c(0.3,0.3,0.3,0.3), "cm")),
+          axis.text.x = element_text(family = fontfamily,
+                                     face = "plain",
+                                     angle = x.axis.angle,
+                                     hjust = hjust,
+                                     vjust = vjust,
+                                     size = rel(fontsize.cex),
+                                     color = "black",
+                                     margin=unit(c(0.3,0.3,0.3,0.3), "cm")),
+          legend.key= element_rect(fill=NA,
+                                   colour = NA),
+          legend.position=ifelse(test = legend, yes = legend.position , no = "none")
+      )
+  }
   return(themeToReturn)
 }
