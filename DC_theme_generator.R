@@ -132,7 +132,7 @@ DC_theme_generator <- function(type,
   
   if( type == "gridlines"){
       # Type: gridlines
-      themeToReturn <- ggplot2::theme_linedraw() + theme(
+      themeToReturn <- ggplot2::theme_linedraw() + ggplot2::theme(
           text = element_text(family = fontfamily),
           plot.title = element_text(family = fontfamily,
                                     face = title.fontstyle,
